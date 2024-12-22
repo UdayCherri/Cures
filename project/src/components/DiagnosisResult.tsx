@@ -4,7 +4,6 @@ import { AlertCircle, Apple, Pill } from 'lucide-react';
 interface DiagnosisResultProps {
   diagnosis: {
     disease: string;
-    confidence: number;
     description: string;
     treatment: string[];
     diet: string[];
@@ -19,9 +18,6 @@ export function DiagnosisResult({ diagnosis }: DiagnosisResultProps) {
       <div className="space-y-2">
         <div className="flex items-center justify-between">
           <h2 className="text-2xl font-bold text-gray-800">{diagnosis.disease}</h2>
-          <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full">
-            {diagnosis.confidence}% confidence
-          </span>
         </div>
         <p className="text-gray-600">{diagnosis.description}</p>
       </div>
